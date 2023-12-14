@@ -1,8 +1,8 @@
 1. Download the following files. There are COCO dataset:
-    http://images.cocodataset.org/zips/train2017.zip
-    http://images.cocodataset.org/zips/val2017.zip
-    http://images.cocodataset.org/annotations/annotations_trainval2017.zip
-2. Define subset of classes which are needed:
+- http://images.cocodataset.org/zips/train2017.zip
+- http://images.cocodataset.org/zips/val2017.zip
+- http://images.cocodataset.org/annotations/annotations_trainval2017.zip
+3. Define subset of classes which are needed:
 ```python
     subset_classes = [
         ['person', 'bicycle'],
@@ -10,9 +10,9 @@
         ['cat']
     ]
 ```
-**Pay attention:** In case, if classes list contains more, than one class, for ex: ['person', 'bicycle'], then images will 
-be found for both ['person', 'bicycle'] classes on the same picture. If you want to include only one class, for ex. person,
-then add list ['person'], where only one class.
+**Pay attention:** In case, if classes list contains more, than one class, for ex: **['person', 'bicycle']**, then images will 
+be found for both **['person', 'bicycle']** classes on the same picture. If you want to include only one class, for ex. person,
+then add list **['person']**, where only one class.
 
 3. Application parameters:
    ```python
@@ -24,7 +24,8 @@ then add list ['person'], where only one class.
         'valid_source_images_zip_path': coco_valid_images_zip_file
     }
     ```
-    | Name | Description |   
+    | Name | Description |
+   | -------- | ------- |
     | train_source_annotations_path | Path to file: **instances_train2017**. Which is placed under http://images.cocodataset.org/annotations/annotations_trainval2017.zip  |
     | valid_source_annotations_path | Path to file: **instances_val2017.json**. Which is placed under http://images.cocodataset.org/annotations/annotations_trainval2017.zip |
     | classes | List of Lists, where defined needed classes to subset.|
@@ -157,7 +158,7 @@ The following error happened:
 So, it is **required** to remap original categories ids and corresponding annotations to own subset ids.
 
 ===
-**WIP** It is required to add additional link and modernisation of repo.
+**WIP** It is required to add additional link and modernisation of repo. Currently, only COCO subset creation is supported here.
 ===
 
 ### Example of tool USAGE:
